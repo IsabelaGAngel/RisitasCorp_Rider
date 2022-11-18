@@ -677,6 +677,24 @@ https://user-images.githubusercontent.com/44727218/202745735-9b77c1fa-7aa5-4abf-
 
 https://user-images.githubusercontent.com/44727218/202746750-5189eaad-f6c7-4fcb-ad46-d88eb26b15e4.mp4
 
+**Implementation**
 
+*A little spoiler: "We achieve it!"*
+
+We build the race and connected all the devices to do it. 
+First place we connect two mobile applications with Unity, to launch the different actions between "Saboteur", "Bicycle rider" and "Master".
+
+Sensors was our second step, we had a candence sensor who was conected throw Bluethoot to an secondary app runing on the main device (computer runing Unity with the bicycling rider app) who recollect the cadence data and resend to Unity throw UDP communication. And last we used a "M5 stack  device" to get the data from his gyroscope, after we sended the "bicycle direction" througth UDP protocole to Unity.
+
+Last but no least, we integrate VR using Tilia to view the world and inmerse our users to thier new momentaneus reality, without concerns.
+
+*Step by step of the process:* 
+1. As the previous section indicates, it began with the connection between Master, Saboteur and Rider:
+- We create the Unity project that will have the mobile application, in this we will find the scenes of (MasterActivities, MasterLog, MasterRevision, ActivitiesSaboteur, SaboteurLog)
+- We add all the graphic elements (backgrounds, buttons, cards, icons...) 
+- We begin the instances and initialization process, for this we must bear in mind that we will use 3 IP addresses (Master Cellphone, Saboteur Cellphone and Main Device Rider)
+- We do the process of creating and initializing the threads, and also the method to remove them later.
+- Now depending on the scene you have to think about the logic that accompanies the processes, in a simplified way would be:
+- 
 
 
