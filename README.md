@@ -260,7 +260,7 @@ if (receiveQueue.Count != 0)
     }
 ```
 
-##Directional sensor
+## Directional sensor
 
 ### Simplified operating steps
 
