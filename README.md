@@ -759,3 +759,7 @@ Last but no least, we integrate VR using Tilia to view the world and inmerse our
 - And we calculated the direction as indicated above.
 - Then we accessed the data it sent and gave direction to the cyclist.
 
+4. We did the implementation of VR with Tilia
+
+5. And the multiplayer version with Photon
+
