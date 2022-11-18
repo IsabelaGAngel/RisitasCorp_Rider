@@ -408,6 +408,48 @@ if ( (currentTime - printIMUTime ) > 100) {
 
 ***Simple Bicycle physics***
 
+**ReceiveDataListener2**
+
+
+
+```c#
+private void ReceiveDataListener2()
+        {
+            Debug.Log("entrando a dirección");
+            while (true)
+            {
+                try
+                {
+                    byte[] data = receiveClient2.Receive(ref receiveEndPoint2);
+                    Debug.Log("entrando a receive");
+                    //UInt16 rpm = BitConverter.ToUInt16(data, data.Length - 2);
+                    float direction = BitConverter.ToSingle(data, 0);
+                    Debug.Log(direction);
+                    receiveQueue2.Enqueue(direction);
+                    customSteerAxis = -direction;
+                    customLeanAxis = -direction;
+
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.Log(ex.ToString());
+                }
+            }
+        }
+```
+This code is very important, because it changes the data that is heard in the computer in binary, it changes it for data in floats, it is also assigned acustomSteerAxis and customLeanAxis, which are the ones that produce the rotation in the handlebars of the bicycle.
+
+**Comment**
+
+```c#
+                //CustomInput("Horizontal", ref customSteerAxis, 5, 5, false);
+                CustomInput("Vertical", ref customAccelerationAxis, 1, 1, false);
+                //CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
+                CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
+```
+
+It is important to comment the customimput horizontally, because otherwise we would have contradictions in the code.
+
 **Vector transformation to direction**
 
 To take the value of the direction, the vector 3 data is placed in a queue and is received in the unity application; so we assign the value to the customSteerAxis that redirects the character in the experience. 
@@ -695,6 +737,25 @@ Last but no least, we integrate VR using Tilia to view the world and inmerse our
 - We begin the instances and initialization process, for this we must bear in mind that we will use 3 IP addresses (Master Cellphone, Saboteur Cellphone and Main Device Rider)
 - We do the process of creating and initializing the threads, and also the method to remove them later.
 - Now depending on the scene you have to think about the logic that accompanies the processes, in a simplified way would be:
-- 
+- MasterLog: Writes the names of the runner and saboteur and sends them.
+- SaboteurLog: Receives the name from the Master and displays it on the home screen.
+- MasterActivities: This scene sends to the saboteur an activity that will be reflected to him to perform.
+- MasterRevision: Allows you to rate the saboteur's activity and sends rewards according to the result.
+- ActivitiesSaboteur: Receives the activity and indicates to the saboteur when he has received a reward usable in the game.
+- We check the connections and we can make Build of the applications.
 
+2. We continue with the process of the cadence sensor:
+- We start with the creation of the BLE protocol (This with the analysis done earlier).
+- We start with the instantiation, and initialization.
+- Then we applied the logic for the state machine and finished calculating the RPM.
+- We continue with the edition of the simple bicycle physics.
+- Connecting the serial port and IP address
+- We do the process of creating and initializing the threads, and also the method to remove them later.
+- Finally we transform the value of the RPM to Speed
+
+3. We made the incorporation of the last sensor, the steering sensor:
+- For that we programmed the board with Arduino ide.
+- We made the initialization code and the graphing code for orientation.
+- And we calculated the direction as indicated above.
+- Then we accessed the data it sent and gave direction to the cyclist.
 
