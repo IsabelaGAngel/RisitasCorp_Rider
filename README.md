@@ -1,5 +1,5 @@
 
-![Logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c677e014-096e-4d5c-9a1a-967260f910ef/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221116%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221116T003300Z&X-Amz-Expires=86400&X-Amz-Signature=bba3963933c824c412e7fc360d77ca6f422734219919733b2750cf24d77093d8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D"Untitled.png"&x-id=GetObject)
+![Logo](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/RisitasLogo.png)
 
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
 
@@ -37,20 +37,20 @@ The idea with this sensor is to measure the speed of the rider, following the fo
 
 [Bryton Rider magnet-less Dual](https://www.amazon.com/Bryton-Smart-Speed-Cadence-Sensor/dp/B07227TTX4/ref=sr_1_3?crid=JD6L4KAJQS94&keywords=bryton+cadence+sensor&qid=1663290246&sprefix=bryton+cadence+sensor%2Caps%2C134&sr=8-3)
 
-![](https://m.media-amazon.com/images/I/71QfYFoieLL.SS700.jpg)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/CadenceSensor.png)
 
 For this process we were implementing the Bryton cadence sensor; that allows us to place it easily  and operation through BLE protocol.
 
 **UDP Client Architecture Segment**
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cf194e16-86fb-4695-9008-69500a974e86/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221115T132451Z&X-Amz-Expires=86400&X-Amz-Signature=04c07b6ff57001938abd555e2861e752e37595a907113045a989da10a6923662&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D"Untitled.png"&x-id=GetObject)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Segmento1.png)
 
 The cadence sensor will function as the first UDP connection; being also the only one that is done by Bluetooth.
 
 **Programs to use**
 
 *Visual studio*
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Visual_Studio_2012_logo_and_wordmark.svg/2560px-Visual_Studio_2012_logo_and_wordmark.svg.png)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/VisualStudio.png)
 
 This will host the application that will act as UDP Server. For this it is necessary to add a reference to the project that allows us to assist language projections through readable metadata files; in this case to be able to use a library.
 
@@ -58,7 +58,7 @@ This will host the application that will act as UDP Server. For this it is neces
 
 *Unity*
 
-![](https://unity.com/logo-unity-web.png)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Unitylogo.png)
 
 The UDP client that will take the RPM and act with respect to the velocity that the user takes in real time. We will use editor version 2021.3.10f1
 
@@ -77,7 +77,7 @@ We need to know that BLE devices have two modes:
 * Connected device mode (also called **GATT** for **G**eneric **ATT**ribute Profile).
 
 The GAP model consists of 2 users the *Broadcaster* who sends a series of data and advertisements; the *observer* that check advertisements being broadcast by the Broadcaster.
-![](https://cdn-learn.adafruit.com/assets/assets/000/086/833/medium800/leds_ble_modes.jpg?1578680670)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/mapa.jpg)
 
 **Code initialization**
 
@@ -189,7 +189,7 @@ Simple bicycle physics is a *AAA* E-sport Asset built to work in new generation 
 
 [Assets used](https://assetstore.unity.com/packages/tools/physics/simple-bicycle-physics-206818)
 
-![](https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/8a3e8efa-b6ac-4f2d-90fc-0ceebe8fc755.webp)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/bicycleRider.png)
 
 **Connecting to the serial port**
 
@@ -390,20 +390,22 @@ if (receiveQueue2.Count != 0)
 
 [M5Stack Kit de desarrollo IoT Core2 ](https://www.amazon.com/-/es/M5Stack-desarrollo-Core2-ESP32-EduKit/dp/B08VGRZYJR)
 
-![](https://mcielectronics.cl/wp-content/uploads/2022/07/MCI08023I.webp)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/core2.jpg)
 
 For the development of the movement, as already mentioned, we will use the M5Stack Core2 sensor making use of its gyroscope.
 
 **UDP Client Architecture Segment**
 
-![](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa347567c-5cad-4399-bb39-bbe1101ad4a0%2FUntitled.png?table=block&id=a5f63e91-08cb-4f8b-a9d6-f551e6fa118d&spaceId=77a55f96-fd48-4da9-8e8b-a873b33067de&width=2000&userId=114760f6-c6e8-4017-93c6-ef8962d0b2dd&cache=v2)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Segmento2.png)
 
 The address sensor (for simplicity) will work as a second UDP client, connected directly to a wifi app on the computer.
 
 **Programs to use**
 
 *Arduino IDE*
-![](https://content.arduino.cc/assets/arduino_logo_1200x630-01.png)
+
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/ArduinoLogo.png)
+
 Arduino IDE will be used to program the microcontroller so that it knows that it must handle the gyroscope and transforms them to vectors; for this it is necessary to add in the card manager the M5Stack library, and the Core2 personal library. 
 
 [Manufacturer's instructions](https://docs.m5stack.com/en/arduino/arduino_development)
@@ -414,7 +416,7 @@ Arduino IDE will be used to program the microcontroller so that it knows that it
 
 *Unity*
 
-![](https://unity.com/logo-unity-web.png)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Unitylogo.png)
 The UDP client that will take the vector and change this with respect to the direction that the user takes in real time. We will use editor version 2021.3.10f1
 
 
@@ -546,7 +548,7 @@ These applications run on android devices connected to the same local Wifi netwo
 
 ***Explanation of the functionalities***
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/70d5f4ac-513e-4f08-963e-04d497205118/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221115T235057Z&X-Amz-Expires=86400&X-Amz-Signature=3ce033860bd6cf8a1a25958a6cb2cde491ae84b8ddcecc69bbdef735211a9eac&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D"Untitled.png"&x-id=GetObject)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Segmento3.png)
 
 External applications are part of the 3 and 4 UDP client; These affect their own actions directly.
 
@@ -704,12 +706,35 @@ As seen in the code each one is assigned its IP address and its serial port to a
 
 To verify the connections between the applications we will use the scriptCommunicator program; facilitating the process of reviewing and filtering data.
 
-![](https://a.fsdn.com/con/app/proj/scriptcommunicator/screenshots/2017-08-07_16h01_36.png/max/max/1)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/script.png)
 
 *Remember that application deployment code is not written in this repository; To see the full functionality download a version of the following link*
 
 [Risitas Corp. APP Repository](https://github.com/IsabelaGAngel/RisitasCorp_App)
 
 
-![Logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c677e014-096e-4d5c-9a1a-967260f910ef/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221116%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221116T003300Z&X-Amz-Expires=86400&X-Amz-Signature=bba3963933c824c412e7fc360d77ca6f422734219919733b2750cf24d77093d8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D"Untitled.png"&x-id=GetObject)
+![Logo](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/RisitasLogo.png)
 
+
+In this part of the document you will find conceptualization, Experience Design (Ux) and Interface Design (UI) in addition to the evidence in photo format, and link to videos.
+
+
+## Conceptualization
+
+***Why was this project born?***
+
+"The World Health Organization defines academic stress to the situations implicit in the educational process that are not controlled by the student and that can cause sleep disorders, behavior or even diseases."
+
+This stress tends to be exacerbated in project season and final exams due to the lack of time organization. That is why we decided to create a project that is dedicated to de-stress and create a calmer environment for all those who go through difficult times.
+
+Risitas Corp borned as a fictitious company that seeks help students with stress generated by “final exam’s time”. Aplying an absurdely narrative who distract the students and generate places to share beetwen them and erase the stress on those difficult times. 
+
+### ***Narrative of the experience***
+
+In a very happy world. The better-known company Risitas Corp. has committed a failure in one of the cheerful power plants;The world has been turned upside down and yet you must really be late for your work so as not to make it worse.
+
+**What is the goal of Risitas Corp.?**
+
+We’re a multinational conglomerate of companies working on responsible for energy, logistics, social, and scientific investigation. Our world is so different than yours, we have created a new virtual reality proyect who is seeking help you with the stress gerenerated by university exams. 
+
+With a world governed by contradictory physics to ours. Risitas Corp. gave us the ability to change our interactions with its and generate funny situation who distract the users and viewers by the experience, therefore. In a pararell world you managed  to win your exam!
