@@ -738,3 +738,40 @@ In a very happy world. The better-known company Risitas Corp. has committed a fa
 We’re a multinational conglomerate of companies working on responsible for energy, logistics, social, and scientific investigation. Our world is so different than yours, we have created a new virtual reality proyect who is seeking help you with the stress gerenerated by university exams. 
 
 With a world governed by contradictory physics to ours. Risitas Corp. gave us the ability to change our interactions with its and generate funny situation who distract the users and viewers by the experience, therefore. In a pararell world you managed  to win your exam!
+
+
+## How we achieve it?
+
+The process of creating the project was based on 2 sections
+
+***The technological***
+
+Dedicated to all those circuits, and devices necessary for the functionality of the project.
+
+***The design***
+
+Comprising the creation process and user experience.
+
+### ***Tech***
+
+***Research***
+
+The idea of the project was to create a race against the clock of a cyclist; which will be constantly sabotaged by his friends and by the altered physics of the game itself.
+
+For the elaboration of the project we decided to work under a group of UDP clients who would join the project.
+
+1. We would have a cadence sensor that would give us the RPM so we would measure the speed of the rider.
+
+2. An M5Stack sensor that will be the one who directs the direction of the simulator
+
+3. A saboteur device that will give tasks to the user who fulfills this role.
+
+4. A Master's device that will send the tasks to the saboteur and the advantages or disadvantages to the cyclist.
+
+**Evidence**
+
+Many videos and photos
+
+https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/ReferenciaJuego.mp4
+
+
